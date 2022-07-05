@@ -10,5 +10,12 @@ fn main() {
     io::stdin().read_line(&mut tmin).unwrap();
     let tmaxi:u8=tmax.trim().parse().unwrap();
     let tmini:i8=tmin.trim().parse().unwrap();
-    println!("La temperatura maxima de mi ciudad fue {} y la temperatura minima fue {}",tmaxi,tmini);
+
+    if tmini < -5 {
+        println!("Que pinche frio amigo mio, temperatura minima {} ",tmini);
+    }else{
+        let promedio:i8=(tmaxi as i8+tmini)/2;
+        println!("ta bien el promedio del clima {}",promedio);
+    }
+    
 }
